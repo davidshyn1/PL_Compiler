@@ -1,0 +1,13 @@
+int a, b, c = 1;
+char greatest, e;
+greatest = 1;
+
+a = b + 14;
+d = 4;
+
+if (a+1 > c) then {
+    e=5;
+}
+else {
+    e=3;
+}
