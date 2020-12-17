@@ -8,7 +8,7 @@ fname = "lexical_check.txt"
 with open(fname, 'r') as txt:
     code = txt.read()
 
-print(code)
+
 scan = scanner(code)
 scan.lexical()
 token = scan.tokens

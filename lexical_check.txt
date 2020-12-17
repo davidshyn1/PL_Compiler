@@ -5,9 +5,9 @@ greatest = 1;
 a = b + 14;
 d = 4;
 
-if (a+1 > c) then {
+IF (a+1 == c) THEN {
     e=5;
 }
-else {
+ELSE {
     e=3;
 }
