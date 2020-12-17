@@ -33,7 +33,7 @@ class scanner():
                     self.tokens.append(['word : ', token])
                 i+=len(token)
 
-            elif self.code[i] == ' ' or self.code[i] == '\n': #space_bar, enter key(ascii=13) --> skip
+            elif self.code[i] == ' ' or self.code[i] == '\n': #space_bar, enter key --> skip
                 i+=1
 
             else: #bracket, operator or error(length =1) (for operator '==' : length =2)
