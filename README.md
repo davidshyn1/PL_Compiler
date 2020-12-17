@@ -34,7 +34,8 @@ num ::= [0-9]*
 
 ```
 LD Reg#1, addr(or num)  | Load var (or num) into the Reg#1
-ST Reg#1, addr          | Store value of Reg#1 into var ADD Reg#1, Reg#2, Reg#3 Reg#1 = Reg#2 + Reg#3
+ST Reg#1, addr          | Store value of Reg#1 into var
+ADD Reg#1, Reg#2, Reg#3 | Reg#1 = Reg#2 + Reg#3
 MUL Reg#1, Reg#2, Reg#3 | Reg#1 = Reg#2 x Reg#3
 LT Reg#1, Reg#2, Reg#3  | 1 if (Reg#2 < Reg#3), 0 otherwise , store into Reg#1
 JUMPF Reg#1 label       | Jump to label if Reg#1 contains 0
