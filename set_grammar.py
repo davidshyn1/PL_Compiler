@@ -38,4 +38,5 @@ if __name__ == "__main__":
     print()
 
     grammar = set_grammar('./grammar.txt')
-    print(grammar)
+    for a in grammar:
+        print(a)
