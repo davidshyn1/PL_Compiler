@@ -4,20 +4,16 @@ def set_grammar(grammar_path):
     with open(grammar_path, 'r', encoding="utf-8") as g:
         grammar_txt = g.read()
     grammar_list = grammar_txt.strip().split(";\n")
-    print(grammar_list)
     grammar = dict()
     for trans in grammar_list:
         key, value = trans.split("->")
         key = key.strip()
-        print(value)
         grammar[key] = []
         value = value.replace("([a-z] | [A-Z])*", "[a-z]* | [A-Z]*") #last grammar distributive rule
         value = value.replace('"', '') #delete quotation mark
         value = value.replace('\n', '') #delete enter
         value = value.replace(' ', '') #delete space
         value = value.split("|") #split 'or'
-        print(value)
-        print("-" * 100)
         for val in value:
             val = val.split()
             if len(val):
@@ -42,3 +38,4 @@ if __name__ == "__main__":
     print()
 
     grammar = set_grammar('./grammar.txt')
+    print(grammar)
