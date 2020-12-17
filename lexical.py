@@ -6,8 +6,8 @@ class scanner():
         self.bracket = ['(', ')', '{', '}']
         self.special_character = [",", ';']
         self.type = ['int', 'char'] #lower_case character
-        self.statement = ['if', 'then', 'else', 'while'] #lower_case character
-        self.Return = ["return"] #lower_case character
+        self.statement = ['IF', 'THEN', 'ELSE', 'WHILE'] #higher_case character
+        self.exit = ["EXIT"] #higher_case character
         self.operator = ['>','==', '+', '*', '=']
         self.tokens = []
 
@@ -45,7 +45,7 @@ class scanner():
                     self.tokens.append(['type : ', token])
                 elif token in self.statement:
                     self.tokens.append(['statement : ', token])
-                elif token in self.Return:
+                elif token in self.exit:
                     self.tokens.append(['return : ', token])
                 else:
                     self.tokens.append(['word : ', token])
