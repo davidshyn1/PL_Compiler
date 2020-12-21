@@ -2,17 +2,15 @@ prog -> word "(" ")" block ;
 decls -> decls decl
 | ;
 decl -> vtype word ";" ;
-vtype -> int | char
-| ;
+vtype -> int | char ;
 block -> "{" decls slist "}"
 | ;
 slist -> slist stat
-| stat ;
+| ;
 stat -> IF cond THEN block ELSE block
 | WHILE cond block
 | word "=" expr ";"
-| EXIT expr ";"
-| ;
+| EXIT expr ";" ;
 cond -> expr ">" expr
 | expr "==" expr ;
 expr -> term

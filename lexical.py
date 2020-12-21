@@ -5,7 +5,7 @@ class scanner():
         self.code = code
         self.length = len(code)
         self.bracket = ["(", ")", "{", "}"]
-        self.special_character = [",", ";"]
+        self.other_character= [",", ";"]
         self.type = ['int', 'char'] #lower_case character
         self.statement = ['IF', 'THEN', 'ELSE', 'WHILE'] #higher_case character
         self.exit = ["EXIT"] #higher_case character
@@ -33,8 +33,8 @@ class scanner():
                     self.tokens.append(['word : ', token])
                 i+=len(token)
 
-            elif self.code[i] == ' ' or self.code[i] == '\n': #space_bar, enter key --> skip
-                i+=1
+            elif self.code[i] == ' ' or self.code[i] == '\n' or self.code[i] == 9 or self.code[i] == '   ':
+                i += 1
 
             else: #bracket, operator or error(length =1) (for operator '==' : length =2)
                 if self.code[i] in self.bracket:
@@ -47,7 +47,7 @@ class scanner():
                     else:
                         self.tokens.append(['operator : ', self.code[i]])
                         i+=1
-                elif self.code[i] in self.special_character:
+                elif self.code[i] in self.other_character:
                     self.tokens.append(['comma, semicolon : ', self.code[i]])
                     i+=1
                 else:
